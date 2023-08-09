@@ -10,6 +10,6 @@ def caesar_cipher(text, shift=5):
 
     return result
 
-plain_text = input("Enter a sentence to encrypt: ")
+plain_text = input("Enter a sentence to encrypt:")
 encrypted_text = caesar_cipher(plain_text)
 print("The encrypted text is:", encrypted_text)
