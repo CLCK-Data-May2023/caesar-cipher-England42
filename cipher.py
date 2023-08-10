@@ -1,39 +1,16 @@
-substitution = {
-    "a": "f",
-    "b": "g",
-    "c": "h",
-    "d": "i",
-    "e": "j",
-    "f": "k",
-    "g": "l",
-    "h": "m",
-    "i": "n",
-    "j": "o",
-    "k": "p",
-    "l": "q",
-    "m": "r",
-    "n": "s",
-    "o": "t",
-    "p": "u",
-    "q": "v",
-    "r": "w",
-    "s": "x",
-    "t": "y",
-    "u": "z",
-    "v": "a",
-    "w": "b",
-    "x": "c",
-    "y": "d",
-    "z": "e",
-}
+abc = "abcdefghijklmnopqrstuvwxyz"
 
-plain_text = input("Please enter a sentence:")
+shift = 5
+plain_text = input("Please enter a sentence: ")
 plain_text = plain_text.lower()
 
 secret_text = ""
+
 for char in plain_text:
-    if char in substitution:
-        char = substitution[char]
+    if char in abc:
+        index = abc.find(char)
+        index = (index + shift) % 26
+        char = abc[index]
     secret_text += char
     
 print(secret_text)
