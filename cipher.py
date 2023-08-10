@@ -1,39 +1,19 @@
-substitution = {
-    "a": "f",
-    "b": "g",
-    "c": "h",
-    "d": "i",
-    "e": "j",
-    "f": "k",
-    "g": "l",
-    "h": "m",
-    "i": "n",
-    "j": "o",
-    "k": "p",
-    "l": "q",
-    "m": "r",
-    "n": "s",
-    "o": "t",
-    "p": "u",
-    "q": "v",
-    "r": "w",
-    "s": "x",
-    "t": "y",
-    "u": "z",
-    "v": "a",
-    "w": "b",
-    "x": "c",
-    "y": "d",
-    "z": "e",
-}
+def caesar_cipher(text, shift=5):
+    encrypted_text = ""
 
+    for char in text:
+        if char.isalpha():
+            # Determine whether the character is lowercase or uppercase and set the base ASCII value
+            base = ord('a') if char.islower() else ord('A')
+            # Encrypt the character and add to the result
+            encrypted_text += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            # If not alphabetic, just add the original character to the result
+            encrypted_text += char
+
+    return encrypted_text
+
+# Ask user for input
 plain_text = input("Please enter a sentence:")
-plain_text = plain_text.lower()
-
-secret_text = ""
-for char in plain_text:
-    if char in substitution:
-        char = substitution[char]
-    secret_text += char
-    
-print(secret_text)
+encrypted_text = caesar_cipher(plain_text)
+print("The encrypted sentence is:", encrypted_text)
