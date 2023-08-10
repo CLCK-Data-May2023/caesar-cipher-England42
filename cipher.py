@@ -27,7 +27,7 @@ substitution = {
     "z": "e",
 }
 
-plain_text = input("Please enter a sentence: ")
+plain_text = input("Please enter a sentence:")
 plain_text = plain_text.lower()
 
 secret_text = ""
