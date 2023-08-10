@@ -37,7 +37,3 @@ for char in plain_text:
     secret_text += char
     
 print(secret_text)
-
-plain_text = input("Enter a sentence to encrypt:")
-encrypted_text = caesar_cipher(plain_text)
-print("The encrypted text is:", encrypted_text)
