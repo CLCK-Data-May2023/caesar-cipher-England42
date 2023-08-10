@@ -1,7 +1,7 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
 
 shift = int(input(5))
-plain_text = input("Please enter a sentence: ")
+plain_text = input("Please enter a sentence:")
 plain_text = plain_text.lower()
 
 secret_text = ""
