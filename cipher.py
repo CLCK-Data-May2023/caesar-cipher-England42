@@ -26,7 +26,7 @@ substitution = {
     "y": "d",
     "z": "e",
 }
-plain_text = input("Please enter a sentence:")
+plain_text = input("Please enter a sentence: Python is fun!")
 plain_text = plain_text.lower()
 secret_text = ""
 for char in plain_text:
