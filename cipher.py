@@ -1,6 +1,6 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
 
-shift = 5
+shift = int(input(5))
 plain_text = input("Please enter a sentence: ")
 plain_text = plain_text.lower()
 
