@@ -34,7 +34,6 @@ secret_text = ""
 for char in plain_text:
     if char in substitution:
         char = substitution[char]
-        shift = 5
     secret_text += char
     
 print(secret_text)
